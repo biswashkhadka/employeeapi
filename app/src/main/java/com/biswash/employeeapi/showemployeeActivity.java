@@ -52,7 +52,8 @@ public class showemployeeActivity extends AppCompatActivity {
                     String data = "";
                     data += "Name is :" + emp.getEmployee_name() + "\n";
                     data += "Salary is :" + emp.getEmployee_salary() + "\n";
-                    data += "---------------" + "\n";
+                    data += "employee_age :" + emp.getEmployee_age() + "\n";
+                    data += "profile_image :" + emp.getProfile_image() + "\n";
                     tvOutput.append(data);
                 }
 

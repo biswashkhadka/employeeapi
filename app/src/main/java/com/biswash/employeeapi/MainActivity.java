@@ -23,7 +23,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnShowEmployee;
+    Button btnShowEmployee, btnSearch, btnAddEmployee;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+        btnAddEmployee = findViewById(R.id.btnAddEmployee);
+        btnAddEmployee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, registerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        btnSearch = findViewById(R.id.btnSearch);
+        btnSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, searchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }
