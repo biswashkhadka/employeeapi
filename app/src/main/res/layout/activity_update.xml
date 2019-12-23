@@ -10,10 +10,10 @@
     tools:context=".updateActivity">
 
     <EditText
+        android:id="@+id/etEmployee"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Employee No"
-        android:id="@+id/etEmployee"
         android:textSize="25sp"
         />
 
@@ -60,6 +60,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="Update"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Delete"
         android:textSize="20sp"
         />
 
