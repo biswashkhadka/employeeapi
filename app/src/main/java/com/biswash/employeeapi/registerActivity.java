@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.biswash.employeeapi.api.EmployeeAPI;
 import com.biswash.employeeapi.model.EmployeeCUD;
+import com.biswash.employeeapi.url.URL;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -19,7 +20,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class registerActivity extends AppCompatActivity {
 
-    private final static String BASE_URL = "http://dummy.restapiexample.com/api/v1/";
     private EditText etName, etSalary, etAge;
     private Button btnAddEmployee;
 
@@ -49,7 +49,7 @@ public class registerActivity extends AppCompatActivity {
         EmployeeCUD employee = new EmployeeCUD(name, salary, age);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(URL.base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
